@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meu To-do List</title>
+    <meta name="description" content="Um aplicativo de organização e anotação de tarefas para o dia a dia.">
+    <meta name="author" content="Victor">
+    <meta property="og:title" content="To-do List | Meu Projeto">
+    <meta property="og:description" content="Confira este gerenciador de tarefas!">
+    <meta property="og:type" content="website">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <button class="btnTema" onclick="mudarTema()">☀️</button>
+        <div class="appLista">
+            <h2>Sua Lista de Tarefas</h2>
+            <div class="inputContainer">
+                <!--Aqui é o input para adicionar tarefas-->
+                <input type="text" id="inputTarefa" placeholder="Digite sua tarefa...">
+                <!--Aqui é o select para escolher a prioridade da tarefa-->
+                <select id="prioridade">
+                    <option value="urgente">Urgente</option>
+                    <option value="adiavel">Adiável</option>
+                </select>
+                <!--Aqui é o botão para adicionar a tarefa-->
+                <button id="btnAdicionar" onclick="addTarefa()">Adicionar</button>
+            </div>
+            <ul id="listaDeTarefas">
+                <!--Aqui serão listadas as tarefas-->
+                <!--<li class="checked">Tarefa 1</li>-->
+            </ul>
+        </div>
+        <footer>
+            <!--Aqui ficam os contadores das tarefas-->
+            <div class="contador-container">
+                <span>Todas: <strong id="contadorTodas">0</strong></span>
+                <span>Pendentes: <strong id="contadorPendentes">0</strong></span>
+                <span>Concluídas: <strong id="contadorConcluidas">0</strong></span>
+            </div>
+        </footer>
+    </div>
+</body>
+<script src="script.js"></script>
+</html>
